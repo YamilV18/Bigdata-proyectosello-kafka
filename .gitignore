@@ -1,0 +1,39 @@
+# ==========================================
+# Artifacts de Spark Structured Streaming & Parquet
+# ==========================================
+# Excluir cualquier carpeta o subcarpeta de Parquet/Checkpoints
+artifacts/
+**/artifacts/
+*.parquet
+*.parquet.crc
+**/chk_*
+/tmp/s08-chk*
+/tmp/chk_*
+
+# ==========================================
+# Archivos de Checkpoint de Spark
+# ==========================================
+# Excluye directorios generados por checkpointLocation
+**/checkpointLocation/
+**/.metadata/
+**/offsets/
+**/commits/
+**/state/
+**/sources/
+
+# ==========================================
+# Archivos temporales de Jupyter y Python
+# ==========================================
+.ipynb_checkpoints/
+**/ .ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+
+# ==========================================
+# Entornos Virtuales
+# ==========================================
+venv/
+.venv/
+env/

@@ -51,3 +51,18 @@ services:
     depends_on:
       - kafka
       - bridge-binance
+
+  pyspark-jupyter:
+    build: ./pyspark
+    container_name: cripto-pyspark-jupyter
+    restart: unless-stopped
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: "criptoanalytics"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    depends_on:
+      - kafka
